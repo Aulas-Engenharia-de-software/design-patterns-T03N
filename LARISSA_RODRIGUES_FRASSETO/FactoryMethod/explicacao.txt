@@ -1,0 +1,7 @@
+
+
+A ideia da implementação desse projeto é simples:
+
+A criação de diferentes tipos de usuários em um sistema.
+No projeto, utilizei os tipos: Admin, Visitante e Moderador,
+cada um com diferentes permissões.

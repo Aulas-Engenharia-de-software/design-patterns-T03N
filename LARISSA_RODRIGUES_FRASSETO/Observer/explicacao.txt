@@ -1,0 +1,6 @@
+
+
+A ideia da implementação desse projeto é:
+
+Uma simulação de um aplicativo de música, onde os usuários
+recebem notificações sempre que uma nova música é lançada na plataforma.
