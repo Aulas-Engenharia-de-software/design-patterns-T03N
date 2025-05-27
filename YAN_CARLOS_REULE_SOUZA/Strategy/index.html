@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Strategy – Notificações JS puro</title>
+</head>
+<body>
+  <h1>Demo Strategy em JavaScript</h1>
+
+  <label>Canal:
+    <select id="channel">
+      <option value="email">E-mail (console)</option>
+      <option value="sms">SMS (console)</option>
+      <option value="push">Push (Notification API)</option>
+    </select>
+  </label>
+  <br />
+
+  <label>Para: <input id="to" placeholder="destinatário" /></label><br />
+  <textarea id="msg" rows="4" cols="40" placeholder="Digite a mensagem"></textarea><br />
+  <button id="sendBtn">Enviar</button>
+
+  <script type="module">
+    import Notifier from './js/notifier.js';
+    import EmailChannel from './js/emailChannel.js';
+    import SmsChannel from './js/smsChannel.js';
+    import PushChannel from './js/pushChannel.js';
+
+    const strategyMap = {
+      email: new EmailChannel(),
+      sms:   new SmsChannel(),
+      push:  new PushChannel(),
+    };
+
+    const notifier = new Notifier(strategyMap.email);
+
+    document.getElementById('sendBtn').addEventListener('click', async () => {
+      const type  = document.getElementById('channel').value;
+      const to    = document.getElementById('to').value;
+      const msg   = document.getElementById('msg').value;
+
+      notifier.setChannel(strategyMap[type]);
+      await notifier.notify(msg, to);   // delega à estratégia
+    });
+  </script>
+</body>
+</html>
