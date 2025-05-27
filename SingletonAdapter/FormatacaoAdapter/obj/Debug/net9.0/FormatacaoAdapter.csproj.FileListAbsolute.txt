@@ -1,0 +1,15 @@
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoAdapter\bin\Debug\net9.0\FormatacaoAdapter.exe
+C:\Users\USER\Source\Repos\design-patterns-T03N\FormatacaoAdapter\bin\Debug\net9.0\FormatacaoAdapter.deps.json
+C:\Users\USER\Source\Repos\design-patterns-T03N\FormatacaoAdapter\bin\Debug\net9.0\FormatacaoAdapter.runtimeconfig.json
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoAdapter\bin\Debug\net9.0\FormatacaoAdapter.dll
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoAdapter\bin\Debug\net9.0\FormatacaoAdapter.pdb
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoAdapter\obj\Debug\net9.0\FormatacaoAdapter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoAdapter\obj\Debug\net9.0\FormatacaoAdapter.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoAdapter\obj\Debug\net9.0\FormatacaoAdapter.AssemblyInfo.cs
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoAdapter\obj\Debug\net9.0\FormatacaoAdapter.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoAdapter\obj\Debug\net9.0\FormatacaoAdapter.sourcelink.json
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoAdapter\obj\Debug\net9.0\FormatacaoAdapter.dll
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoAdapter\obj\Debug\net9.0\refint\FormatacaoAdapter.dll
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoAdapter\obj\Debug\net9.0\FormatacaoAdapter.pdb
+C:\Users\USER\Source\Repos\design-patterns-T03N\FormatacaoAdapter\obj\Debug\net9.0\FormatacaoAdapter.genruntimeconfig.cache
+C:\Users\USER\Source\Repos\design-patterns-T03N\FormatacaoAdapter\obj\Debug\net9.0\ref\FormatacaoAdapter.dll

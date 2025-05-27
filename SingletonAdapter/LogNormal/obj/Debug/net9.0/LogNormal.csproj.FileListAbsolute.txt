@@ -1,0 +1,15 @@
+C:\Users\USER\source\repos\design-patterns-T03N\LogNormal\bin\Debug\net9.0\LogNormal.exe
+C:\Users\USER\Source\Repos\design-patterns-T03N\LogNormal\bin\Debug\net9.0\LogNormal.deps.json
+C:\Users\USER\Source\Repos\design-patterns-T03N\LogNormal\bin\Debug\net9.0\LogNormal.runtimeconfig.json
+C:\Users\USER\source\repos\design-patterns-T03N\LogNormal\bin\Debug\net9.0\LogNormal.dll
+C:\Users\USER\source\repos\design-patterns-T03N\LogNormal\bin\Debug\net9.0\LogNormal.pdb
+C:\Users\USER\source\repos\design-patterns-T03N\LogNormal\obj\Debug\net9.0\LogNormal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\design-patterns-T03N\LogNormal\obj\Debug\net9.0\LogNormal.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\design-patterns-T03N\LogNormal\obj\Debug\net9.0\LogNormal.AssemblyInfo.cs
+C:\Users\USER\source\repos\design-patterns-T03N\LogNormal\obj\Debug\net9.0\LogNormal.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\design-patterns-T03N\LogNormal\obj\Debug\net9.0\LogNormal.sourcelink.json
+C:\Users\USER\source\repos\design-patterns-T03N\LogNormal\obj\Debug\net9.0\LogNormal.dll
+C:\Users\USER\source\repos\design-patterns-T03N\LogNormal\obj\Debug\net9.0\refint\LogNormal.dll
+C:\Users\USER\source\repos\design-patterns-T03N\LogNormal\obj\Debug\net9.0\LogNormal.pdb
+C:\Users\USER\Source\Repos\design-patterns-T03N\LogNormal\obj\Debug\net9.0\LogNormal.genruntimeconfig.cache
+C:\Users\USER\Source\Repos\design-patterns-T03N\LogNormal\obj\Debug\net9.0\ref\LogNormal.dll

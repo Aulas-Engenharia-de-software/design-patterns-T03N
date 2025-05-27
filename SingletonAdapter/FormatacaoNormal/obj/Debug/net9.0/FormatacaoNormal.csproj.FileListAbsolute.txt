@@ -1,0 +1,15 @@
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoNormal\bin\Debug\net9.0\FormatacaoNormal.exe
+C:\Users\USER\Source\Repos\design-patterns-T03N\FormatacaoNormal\bin\Debug\net9.0\FormatacaoNormal.deps.json
+C:\Users\USER\Source\Repos\design-patterns-T03N\FormatacaoNormal\bin\Debug\net9.0\FormatacaoNormal.runtimeconfig.json
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoNormal\bin\Debug\net9.0\FormatacaoNormal.dll
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoNormal\bin\Debug\net9.0\FormatacaoNormal.pdb
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoNormal\obj\Debug\net9.0\FormatacaoNormal.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoNormal\obj\Debug\net9.0\FormatacaoNormal.AssemblyInfoInputs.cache
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoNormal\obj\Debug\net9.0\FormatacaoNormal.AssemblyInfo.cs
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoNormal\obj\Debug\net9.0\FormatacaoNormal.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoNormal\obj\Debug\net9.0\FormatacaoNormal.sourcelink.json
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoNormal\obj\Debug\net9.0\FormatacaoNormal.dll
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoNormal\obj\Debug\net9.0\refint\FormatacaoNormal.dll
+C:\Users\USER\source\repos\design-patterns-T03N\FormatacaoNormal\obj\Debug\net9.0\FormatacaoNormal.pdb
+C:\Users\USER\Source\Repos\design-patterns-T03N\FormatacaoNormal\obj\Debug\net9.0\FormatacaoNormal.genruntimeconfig.cache
+C:\Users\USER\Source\Repos\design-patterns-T03N\FormatacaoNormal\obj\Debug\net9.0\ref\FormatacaoNormal.dll
