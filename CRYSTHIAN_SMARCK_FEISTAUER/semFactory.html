@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sem Factory Method</title>
+    <style>
+      .elemento {
+        margin: 10px;
+        padding: 10px;
+        border: 1px dashed #888;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Sem Factory Method</h2>
+
+    <button onclick="criarElemento('botao')">Criar Botão</button>
+    <button onclick="criarElemento('paragrafo')">Criar Parágrafo</button>
+    <button onclick="criarElemento('input')">Criar Input</button>
+
+    <div id="container"></div>
+
+    <script>
+      function criarElemento(tipo) {
+        let elemento;
+
+        if (tipo === 'botao') {
+          elemento = document.createElement('button');
+          elemento.textContent = 'Sou um botão';
+        } else if (tipo === 'paragrafo') {
+          elemento = document.createElement('p');
+          elemento.textContent = 'Sou um parágrafo';
+        } else if (tipo === 'input') {
+          elemento = document.createElement('input');
+          elemento.placeholder = 'Sou um input';
+        } else {
+          alert('Tipo desconhecido: ' + tipo);
+          return;
+        }
+
+        elemento.classList.add('elemento');
+        document.getElementById('container').appendChild(elemento);
+      }
+    </script>
+  </body>
+</html>

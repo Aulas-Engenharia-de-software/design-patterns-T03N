@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Sem Observer</title>
+    <style>
+      .observer {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Sem Observer</h2>
+    <label>Digite algo: <input type="text" id="subjectInput" /></label>
+
+    <div class="observer" id="observer1">Observador 1:</div>
+    <div class="observer" id="observer2">Observador 2:</div>
+    <div class="observer" id="observer3">Observador 3:</div>
+
+    <script>
+      const input = document.getElementById('subjectInput');
+      const observer1 = document.getElementById('observer1');
+      const observer2 = document.getElementById('observer2');
+      const observer3 = document.getElementById('observer3');
+
+      input.addEventListener('input', function () {
+        const value = input.value;
+        observer1.textContent = 'observer1: ' + value;
+        observer2.textContent = 'observer2: ' + value;
+        observer3.textContent = 'observer3: ' + value;
+      });
+    </script>
+  </body>
+</html>
