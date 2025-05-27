@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exemplo Observer</title>
+    <style>
+      .observer {
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #f0f0f0;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Exemplo Observer</h2>
+    <label>Digite algo: <input type="text" id="subjectInput" /></label>
+
+    <div class="observer" id="observer1">Observador 1:</div>
+    <div class="observer" id="observer2">Observador 2:</div>
+    <div class="observer" id="observer3">Observador 3:</div>
+
+    <script>
+      class Subject {
+        constructor() {
+          this.observers = [];
+        }
+
+        addObserver(observer) {
+          this.observers.push(observer);
+        }
+
+        notifyObservers(value) {
+          this.observers.forEach((observer) => observer.update(value));
+        }
+      }
+
+      class Observer {
+        constructor(element) {
+          this.element = element;
+        }
+
+        update(value) {
+          this.element.textContent = this.element.id + ': ' + value;
+        }
+      }
+
+      const subject = new Subject();
+
+      const observer1 = new Observer(document.getElementById('observer1'));
+      const observer2 = new Observer(document.getElementById('observer2'));
+      const observer3 = new Observer(document.getElementById('observer3'));
+
+      subject.addObserver(observer1);
+      subject.addObserver(observer2);
+      subject.addObserver(observer3);
+
+      document
+        .getElementById('subjectInput')
+        .addEventListener('input', (event) => {
+          subject.notifyObservers(event.target.value);
+        });
+    </script>
+  </body>
+</html>

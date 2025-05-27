@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Exemplo Factory Method</title>
+    <style>
+      .elemento {
+        margin: 10px;
+        padding: 10px;
+        border: 1px dashed #888;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Factory method</h2>
+
+    <button onclick="criarElemento('botao')">Criar Botão</button>
+    <button onclick="criarElemento('paragrafo')">Criar Parágrafo</button>
+    <button onclick="criarElemento('input')">Criar Input</button>
+
+    <div id="container"></div>
+
+    <script>
+      class ElementFactory {
+        criar(tipo) {
+          throw new Error('esse método deve ser sobrescrito.');
+        }
+      }
+
+      class HtmlElementFactory extends ElementFactory {
+        criar(tipo) {
+          let elemento;
+
+          switch (tipo) {
+            case 'botao':
+              elemento = document.createElement('button');
+              elemento.textContent = 'Sou um botão';
+              break;
+            case 'paragrafo':
+              elemento = document.createElement('p');
+              elemento.textContent = 'Sou um parágrafo';
+              break;
+            case 'input':
+              elemento = document.createElement('input');
+              elemento.placeholder = 'Sou um input';
+              break;
+            default:
+              throw new Error('Tipo desconhecido: ' + tipo);
+          }
+
+          elemento.classList.add('elemento');
+          return elemento;
+        }
+      }
+
+      const fabrica = new HtmlElementFactory();
+
+      function criarElemento(tipo) {
+        const container = document.getElementById('container');
+        const novoElemento = fabrica.criar(tipo);
+        container.appendChild(novoElemento);
+      }
+    </script>
+  </body>
+</html>
