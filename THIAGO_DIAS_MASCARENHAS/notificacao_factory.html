@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Notificações com Factory Method</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #log {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 20px;
+      height: 200px;
+      overflow-y: auto;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <h1>Notificações (Factory Method)</h1>
+  <!-- Botões para enviar notificações usando fábrica -->
+  <button onclick="enviarComFactory('email')">Enviar por E-mail</button>
+  <button onclick="enviarComFactory('sms')">Enviar por SMS</button>
+
+  <div id="log"></div>
+
+  <script>
+    // Classe base (interface)
+    class Notificacao {
+      enviar(mensagem) {
+        // Força as classes filhas a implementarem este método
+        throw new Error("Método 'enviar' não implementado");
+      }
+    }
+
+    // Classe concreta para envio por email
+    class NotificacaoEmail extends Notificacao {
+      enviar(mensagem) {
+        adicionarLog(`Enviando E-MAIL: ${mensagem}`);
+      }
+    }
+
+    // Classe concreta para envio por SMS
+    class NotificacaoSMS extends Notificacao {
+      enviar(mensagem) {
+        adicionarLog(`Enviando SMS: ${mensagem}`);
+      }
+    }
+
+    // Classe base da fábrica
+    class NotificacaoFactory {
+      criarNotificacao() {
+        throw new Error("Método 'criarNotificacao' não implementado");
+      }
+    }
+
+    // Fábrica de e-mail
+    class NotificacaoEmailFactory extends NotificacaoFactory {
+      criarNotificacao() {
+        return new NotificacaoEmail();
+      }
+    }
+
+    // Fábrica de SMS
+    class NotificacaoSMSFactory extends NotificacaoFactory {
+      criarNotificacao() {
+        return new NotificacaoSMS();
+      }
+    }
+
+    // Função do cliente que usa a fábrica para criar e enviar a notificação
+    function enviarMensagem(factory, mensagem) {
+      adicionarLog("Criando notificação...");
+      const notificacao = factory.criarNotificacao(); // fábrica entrega o objeto correto
+      adicionarLog("Processando envio...");
+
+      setTimeout(() => {
+        notificacao.enviar(mensagem);
+        adicionarLog("Envio concluído ✅\n");
+      }, 1000);
+    }
+
+    // Decide qual fábrica usar com base no tipo
+    function enviarComFactory(tipo) {
+      limparLog();
+      if (tipo === 'email') {
+        enviarMensagem(new NotificacaoEmailFactory(), "Olá por E-mail!");
+      } else if (tipo === 'sms') {
+        enviarMensagem(new NotificacaoSMSFactory(), "Olá por SMS!");
+      }
+    }
+
+    // Utilitários de log
+    function adicionarLog(texto) {
+      document.getElementById('log').textContent += texto + "\n";
+    }
+
+    function limparLog() {
+      document.getElementById('log').textContent = "";
+    }
+  </script>
+</body>
+</html>
