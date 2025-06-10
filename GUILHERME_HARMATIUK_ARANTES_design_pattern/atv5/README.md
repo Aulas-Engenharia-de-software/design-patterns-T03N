@@ -1,0 +1,1 @@
+Crie uma função que, usando Factory Method, instancie diferentes tipos de veículos (Carro, Moto) a partir de uma fábrica abstrata.
