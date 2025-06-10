@@ -1,0 +1,1 @@
+Implemente em pseudocódigo a renderização de botões usando Factory Method.
