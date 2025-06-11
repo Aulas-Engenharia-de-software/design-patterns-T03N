@@ -1,7 +1,4 @@
-package com.example.singleton;
-
 public class Main {
-
     public static void main(String[] args) {
         System.out.println("--- Exemplo Com Singleton ---");
 
@@ -29,18 +26,19 @@ public class Main {
             NotificationController c = NotificationController.getInstance();
             c.addNotification("Notificação da Thread 2");
         }, "Thread-B");
-        
+
         Thread thread3 = new Thread(() -> {
             NotificationController c = NotificationController.getInstance();
             c.addNotification("Notificação da Thread 3");
             c.displayNotifications();
         }, "Thread-C");
 
+        // Inicia as threads
         thread1.start();
         thread2.start();
         thread3.start();
 
-        // Aguarda as threads terminarem
+        // Aguarda as threads finalizarem
         try {
             thread1.join();
             thread2.join();
@@ -51,9 +49,7 @@ public class Main {
         }
 
         System.out.println("\n--- Estado Final do Controlador Único após Threads ---");
-        // Exibe todas as notificações adicionadas por todas as threads
         NotificationController finalController = NotificationController.getInstance();
         finalController.displayNotifications();
     }
 }
-

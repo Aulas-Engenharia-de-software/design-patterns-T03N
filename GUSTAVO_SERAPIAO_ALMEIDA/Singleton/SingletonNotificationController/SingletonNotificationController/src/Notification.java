@@ -1,8 +1,6 @@
-package com.example.nosingleton;
-
 public class Notification {
-    private String message;
-    private long timestamp;
+    private final String message;
+    private final long timestamp;
 
     public Notification(String message) {
         this.message = message;
@@ -22,4 +20,3 @@ public class Notification {
         return "Notification [message=" + message + ", timestamp=" + timestamp + "]";
     }
 }
-

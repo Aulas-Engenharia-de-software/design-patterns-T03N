@@ -1,9 +1,5 @@
 public class Autenticador {
 
-    /**
-     * Autentica pelo tipo: "senha" ou "token".
-     * NOVO tipo exige modificar este método!
-     */
     public boolean authenticate(String tipo, String username, String credential) {
         User user = UserRepository.findByUsername(username);
         if (user == null) {
