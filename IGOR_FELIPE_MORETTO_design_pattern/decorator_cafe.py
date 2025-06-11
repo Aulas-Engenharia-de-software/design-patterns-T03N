@@ -53,8 +53,6 @@ elif opcao == "chantilly":
     cafe = ComChantilly(cafe)
 elif opcao == "ambos":
     cafe = ComLeite(ComChantilly(cafe))
-
-
-
+    
 print(f"Pedido: {cafe.descricao()}")
 print(f"Custo: R${cafe.custo():.2f}")
