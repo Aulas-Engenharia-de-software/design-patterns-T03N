@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Notificações sem Factory Method</title>
+  <style>
+    /* Estilização básica */
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    button {
+      margin: 10px;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    #log {
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-top: 20px;
+      height: 200px;
+      overflow-y: auto;
+      white-space: pre-line;
+    }
+  </style>
+</head>
+<body>
+  <h1>Notificações (Sem Factory)</h1>
+  <!-- Botões para enviar notificações -->
+  <button onclick="enviarSimples('email')">Enviar por E-mail</button>
+  <button onclick="enviarSimples('sms')">Enviar por SMS</button>
+
+  <!-- Área onde o log das ações será exibido -->
+  <div id="log"></div>
+
+  <script>
+    // Classe que cuida do envio das notificações
+    class EnviadorNotificacao {
+      enviar(tipo, mensagem) {
+        adicionarLog("Criando notificação...");
+        adicionarLog("Processando envio...");
+
+        // Simula um pequeno atraso no envio (1 segundo)
+        setTimeout(() => {
+          if (tipo === 'email') {
+            adicionarLog(`Enviando E-MAIL: ${mensagem}`);
+          } else if (tipo === 'sms') {
+            adicionarLog(`Enviando SMS: ${mensagem}`);
+          } else {
+            adicionarLog("Tipo inválido ❌");
+          }
+          adicionarLog("Envio concluído ✅\n");
+        }, 1000);
+      }
+    }
+
+    // Cria uma única instância do enviador
+    const enviador = new EnviadorNotificacao();
+
+    // Função que limpa o log e chama o envio
+    function enviarSimples(tipo) {
+      limparLog();
+      enviador.enviar(tipo, `Olá por ${tipo.toUpperCase()}!`);
+    }
+
+    // Função utilitária para adicionar mensagens ao log
+    function adicionarLog(texto) {
+      document.getElementById('log').textContent += texto + "\n";
+    }
+
+    // Função para limpar o log
+    function limparLog() {
+      document.getElementById('log').textContent = "";
+    }
+  </script>
+</body>
+</html>
